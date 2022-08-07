@@ -1,0 +1,818 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html, body{
+    height: auto;
+    width: 100%;
+}
+
+/* LOADER */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3C7B0A;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+#myDiv1 {
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+#myDiv2{
+    display: none;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+/* LOADER */
+
+
+/* TOP */
+#logo_main{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    border: 0;
+    z-index: 10;
+    height: 50px;
+    width: 200px;
+    background: transparent;
+    overflow: visible;
+}
+#logo_main > img{
+    width: 100%;
+    height: 100%;
+}
+.navbar{
+    position: absolute;
+    top: 30px;
+    border: 0;
+    z-index: 10;
+    width: 100%;
+    background: transparent;
+    overflow: visible;
+}
+.nav{
+    overflow: hidden;
+}
+.nav > .nav-item > a{
+    color: white;
+}
+.nav > .nav-item > a:hover{
+    text-decoration: none;
+}
+.dropdown{
+    overflow: visible;
+    z-index: 13;
+}
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slid-title{
+    /*display: inline-block;*/
+    animation: slideInLeft;
+    animation-duration: 1s;
+    font-size: 5em;
+    font-weight: bold;
+}
+.slid-capt{
+    /*display: inline-block;*/
+    animation: slideInRight;
+    animation-duration: 1s;
+    font-size: 1.25em;
+    font-weight: lighter;
+}
+
+/* TOP */
+
+
+
+
+
+/* BENEFICIOS SECTION */
+#beneficios{
+    height: auto;
+    width: 97.5%;
+    margin: 50px auto;
+}
+.bene_fila{
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+}
+.recuadro{
+    height: auto;
+    width: 33%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.recuadro > .log_cont{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.rimg > img{
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.rlog > .log_cont > .icon{
+    height: 30px;
+    width: 40px;
+    transition: 0.5s;
+}
+.rlog > .log_cont > .icon:hover{
+    height: 32.5px;
+    width: 42.5px;
+    transition: 0.5s;
+}
+.rlog{
+    background-color: #3C7B0A;
+    padding: 25px 10px 25px 10px;
+}
+.rlog > h5, p{
+    color: #fff;
+}
+.rlog > p{
+    margin: 0;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 0.8em;
+    width: 80%;
+}
+/* BENEFICIOS SECTION */
+
+
+
+
+/* PRODUCTOS SECTION */
+#productos{
+    width: 100%;
+    height: auto;
+    border-top: solid green;
+    border-bottom: solid green ;
+    padding: 10% 0 10% 0;
+    justify-content: center;
+    margin: 7.5% auto;
+    flex-wrap: wrap;
+}
+#productos_text{
+    width: 50%;
+    height: auto;
+    padding-left: 1%;
+    padding-right: 2.5%;
+    justify-content: center;
+}
+#productos_text > h6{
+    text-align: start;
+    color: #3C7B0A;
+}
+#productos_text > h5{
+    text-align: start;
+    font-weight: bold;
+    font-size: 2.2em;
+    color: #262626;
+}
+#productos_text > p{
+    color: black;
+    line-height: 1.9;
+    text-align: justify;
+}
+#productos_text > button{
+    height: 15%;
+    width: 40%;
+    color: green;
+    border: solid green;
+    font-weight: bold;
+    background: transparent;
+    margin-right: 100%;
+    text-decoration: none;
+}
+#productos_text > button > a{
+    color: green;
+    margin-left: 0;
+    font-size: 0.8em;
+    text-decoration: none;
+    transition: 0.5s;
+}
+#productos_text > button > a:hover{
+    font-size: 0.85em;
+    transition: 0.5s;
+}
+.producto{
+    height: auto;
+    width: 22.5%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.prodimg{
+    height: 170px;
+    width: 220px;
+    margin: 20px auto;
+}
+.prodimg > img{
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.producto > button{
+    height: 15%;
+    width: 90%;
+    border: solid green;
+    text-align: center;
+    background: transparent;
+}
+.producto > button > a{
+    color: green;
+    font-weight: bold;
+    font-size: 0.8em;
+    transition: 0.5s;
+}
+.producto > button > a:hover{
+    font-size: 0.85em;
+    transition: 0.5s;
+}
+/* PRODUCTOS SECTION */
+
+
+
+
+/* SOCIOS SECTION */
+#socios{
+    width: 100%;
+    height: auto;
+    margin: 70px auto;
+}
+#socios_text{
+    height: auto;
+    width: 50%;
+    margin-left: 5%;
+    border-left: solid rgb(255, 217, 0);
+    padding: 0 0 0 20px;
+    text-align: start;
+}
+#socios_text > h5{
+    font-size: 2em;
+    margin-bottom: 0;
+}
+#socios_text > h5 > span{
+    font-weight: bold;
+}
+#socios_text > p{
+    color: black;
+    line-height: 1.9;
+    text-align: justify;
+    margin-top: 10px;
+}
+#socios_profs{
+    height: auto;
+    width: 70%;
+    margin: 15px auto;
+    justify-content: space-between;
+    margin: 100px auto;
+}
+.socio_prof{
+    height: 50%;
+    width: 25%;
+}
+.socio_prof > img{
+    width: 100%;
+    height: 100%;
+}
+/* SOCIOS SECTION */
+
+
+/* NOSOTROS SECTION */
+#nosotros{
+    width: 100%;
+    height: auto;
+    margin: 70px auto;
+    padding: 0;
+}
+.nosotros_img{
+    width: 50%;
+    height: auto;
+    padding: 0;
+}
+.nosotros_img > img{
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+}
+#nosotros_txt{
+    width: 50%;
+    height: auto;
+    padding: 30px;
+}
+#nosotros_txt > h5{
+    font-size: 1.75em;
+}
+#nosotros_txt > h5 > span{
+    font-weight: bold;
+}
+#nosotros_txt > p{
+    color: black;
+    line-height: 1.9;
+    text-align: justify;
+}
+#nosotros_txt > button{
+    border: solid green;
+    background-color: transparent;
+    width: 40%;
+    height: 15%;
+    margin: 15px auto;
+}
+#nosotros_txt > button > a{
+    font-size: 0.8em;
+    font-weight: bold;
+    color: green;
+    transition: 0.5s;
+}
+#nosotros_txt > button > a:hover{
+    font-size: 0.85em;
+    transition: 0.5s;
+    text-decoration: none;
+}
+/* NOSOTROS SECTION */
+
+
+/* GALERIA SECTION */
+#galeria{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+#gal_text{
+    height: auto;
+    width: 40%;
+    margin-top: 100px;
+    margin-left: 5%;
+    padding-left: 2%;
+    border-left: solid orange;
+    text-align: start;
+}
+#gal_text > h5{
+    font-size: 2em;
+    margin-bottom: 0;
+}
+#gal_text > h5 > span{
+    font-weight: bold;
+}
+#gal_text > p{
+    color: black;
+    margin-top: 1.5%;
+    line-height: 1.9;
+}
+.flex-row{
+  display:flex;
+  justify-content: center;
+  margin: 25px auto;
+}
+.slider{
+  width: 27.5%;
+  padding:20px;
+}
+.slider div img{
+  width:100%;
+  height:auto;
+}
+/* GALERIA SECTION */
+
+
+/* FORMULARIO SECTION */
+#formulario{
+    width: 100%;
+    height: auto;
+    border: solid #3C7B0A;
+}
+#info_empresa{
+    width: 50%;
+    height: auto;
+    background-color: #3C7B0A;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5%;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+}
+#info_empresa > p{
+    color: #EEC344;
+    font-size: 0.95em;
+    margin: 0;;
+    font-family: sans-serif;
+}
+#info_empresa > h5{
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 5px;
+    margin-bottom: 5%;
+    font-family: sans-serif;
+}
+.info_detalles{
+    margin-left: 7.5%;
+    color: #fff;
+    line-height: 0.25;
+    margin-bottom: 5%;
+    text-align: start;
+}
+.info_detalles > h6{
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+.info_detalles > p{
+    font-size: 0.9em;
+    font-family: sans-serif;
+    margin-top: 9%;
+    font-weight: lighter;
+}
+#sociales{
+    width: 25%;
+    height: auto;
+    justify-content: space-between
+}
+#sociales > .icon{
+    fill: white;
+    height: 20px;
+    width: 20px;
+}
+#cont_formu{
+    width: 50%;
+    height: auto;
+}
+#cont_formu > form{
+    width: 90%;
+    height: auto;
+    margin: 30px auto;
+    padding: 5%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+}
+#cont_formu > form> .form-group{
+    margin: 20px auto;
+}
+#cont_formu > form > .form-group > input{
+    background-color: #F0F5F5;
+    border: 2px solid #F0F5F5;
+    padding: 5%;
+    box-shadow: none;
+}
+#cont_formu > form > .form-group > textarea{
+    background-color: #F0F5F5;
+    border: 2px solid #F0F5F5;
+}
+#cont_formu > form > button{
+    background-color: #46866C;
+    border: none;
+    border-radius: 0;
+    width: 25%;
+    height: auto;
+    margin: 5px auto;
+}
+/* FORMULARIO */
+
+
+/* FOOTER */
+footer > .container-fluid   {
+    margin: 0 auto;
+}
+#trademark{
+    width: 45%;
+    height: auto;
+    padding: 2%;
+    line-height: 1.9;
+    flex-direction: column;
+}
+#trademark_img{
+    width: 60%;
+    height: 20%;
+    margin: 10% auto 10% 0;
+}
+#trademark_img > img{
+    width: 100%;
+    height: 100%;
+}
+#trademark > p{
+    color: black;
+    text-align: justify;
+    font-weight: lighter;
+    font-size: 0.95em;
+    margin-bottom: 0;
+}
+#trademark > #copyright{
+    font-size: 0.8em;
+}
+#ubicacion{
+    width: 27.5%;
+    height: 50%;
+    padding: 2.5%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+}
+#ubicacion > h6{
+    font-weight: bold;
+}
+#ubicacion > p{
+    color: black;
+    width: 70%;
+    margin: 2%;
+    font-weight: lighter;
+}
+#subscripcion{
+    width: 27.5%;
+    height: 50%;
+    padding: 2.5%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+#subscripcion > h6{
+    font-weight: bold;
+}
+#subscripcion > p{
+    color: black;
+    font-weight: lighter;
+}
+#subscripcion > form > button{
+    width: 50%;
+    height: auto;
+    font-weight: lighter;
+    padding: 0;
+    padding-left: 2%;
+    background-color: #3C7B0A;
+    border: none;
+    font-size: 0.8em;
+    text-align: start;
+}
+#subscripcion > form > .form-group{
+    width: 30%;
+    height: auto;
+    margin-right: 5px;
+}
+#subscripcion > form > .form-group > input{
+    font-weight: lighter;
+    box-shadow: none;
+    font-size: 0.8em;
+    padding: 5%;
+}
+#subscripcion > small{
+    margin: 10%;
+    margin-left: 0;
+    font-style: italic;
+}
+/* FOOTER */
+
+
+#up {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 10px; 
+    border: none;
+    outline: none; 
+    background-color:#3C7B0A; 
+    cursor: pointer; 
+    padding: 15px; 
+    border-radius: 50%; 
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+}
+#up > img{
+    width: 80%;
+    height: 80%;
+}
+
+
+@media only screen and (max-width:767px){
+    .bene_fila{
+        flex-direction: column;
+        width: 100%;
+    }
+    .recuadro{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .rlog > p{
+        margin-bottom: 50px;
+    }
+    .rlog > .log_cont{
+        margin-top: 50px;
+    }
+    #productos{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #productos_text{
+        width: 87.5%;
+        margin: 10px auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .producto{
+        width: 80%;
+        margin: 25px auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+    .producto > button{
+        margin: 10px auto;
+        width: 40%;
+    }
+    .carousel-caption{
+        display: block;
+    }
+    #socios_text{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    #nosotros{
+        flex-direction: column;
+    }
+    .nosotros_img{
+        width: 100%;
+    }
+    #nosotros_txt{
+        width: 100%;
+    }
+    #gal_text{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: column;
+    }
+    .slider{
+        width: 90%;
+    }
+    #formulario{
+        flex-direction: column;
+        width: 100%;
+    }
+    #info_empresa{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #cont_formu{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #cont_formu > form{
+        width: 100%;
+    }
+    footer > #myDiv2{
+        flex-direction: column;
+    }
+    #myDiv2 > section{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:1024px){
+    .bene_fila{
+        flex-direction: column;
+        width: 100%;
+    }
+    .recuadro{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .rlog > p{
+        margin-bottom: 50px;
+    }
+    .rlog > .log_cont{
+        margin-top: 50px;
+    }
+    #productos{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #productos_text{
+        width: 87.5%;
+        margin: 10px auto;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .producto{
+        width: 80%;
+        margin: 25px auto;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+    .producto > button{
+        margin: 10px auto;
+        width: 40%;
+    }
+    .carousel-caption{
+        display: block;
+    }
+    #socios_text{
+        width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+    #nosotros{
+        flex-direction: column;
+    }
+    .nosotros_img{
+        width: 100%;
+    }
+    #nosotros_txt{
+        width: 100%;
+    }
+    #gal_text{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .slider{
+        width: 80%;
+    }
+    .slider:nth-child(2){
+        display: none;
+    }
+    .slider:nth-child(3){
+        display: none;
+    }
+    #formulario{
+        flex-direction: column;
+        width: 100%;
+    }
+    #info_empresa{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #cont_formu{
+        width: 100%;
+        margin: 0 auto;
+    }
+    #cont_formu > form{
+        width: 100%;
+    }
+    footer > #myDiv2{
+        flex-direction: column;
+    }
+    #myDiv2 > section{
+        width: 90%;
+    }
+
+}
+
+
+
+
+
+
+
